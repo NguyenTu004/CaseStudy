@@ -22,24 +22,25 @@
             return this.amount=amount;
         }
     }
-    let pro1=new product('váy chữ a','img/vaychuA.png',10,50);
-    let pro2=new product('váy babydoll','img/vaybabydoll.png',11,172);
-    let pro3=new product('áo hoodie','img/aohoodie.png',11,17);
-    let pro4=new product('dép bánh mì','img/depbanhmi.png',3,435);
-    let pro5=new product('áo blazer','img/aoblazer.png',15,12);
-    let pro6=new product('người yêu..','img/tytyTQ.png',99999,1);
-
+    let pro1=new product('váy chữ a','vaychuA.png',10,50);
+    let pro2=new product('váy babydoll','vaybabydoll.png',11,172);
+    let pro3=new product('áo hoodie','aohoodie.png',11,17);
+    let pro4=new product('dép bánh mì','depbanhmi.png',3,435);
+    let pro5=new product('áo blazer','aoblazer.png',15,12);
+    let pro6=new product('người yêu..','tytyTQ.png',99999,1);
     let arr=[[pro6,pro2,pro4,pro1],[pro5,pro3]]
     let data;
     let flag=false;
-    display(arr)
+    function init (){
+        display(arr)
+    }
     function display(ar){
             data="";
             data+="<table class='table3' >"
         for (let i=0;i<ar.length;i++){
             data+="<tr>"
             for (let j=0;j<ar[i].length;j++){
-                data+=`<td class="block"><img class="imgBlock" src="${ar[i][j].img}"><br>Tên: ${ar[i][j].name}, Giá: ${ar[i][j].price} USD <br> Số lượng: ${ar[i][j].amount}<br>
+                data+=`<td class="block"><img class="imgBlock" src="img/${ar[i][j].img}"><br>Tên: ${ar[i][j].name}, Giá: ${ar[i][j].price} USD <br> Số lượng: ${ar[i][j].amount}<br>
                            <button class="edit_dele" onclick="edit(${i},${j})" type="button" data-toggle="modal" data-target="#exampleModal">Edit</button>
                            <button class="edit_dele" onclick="delete1(${i},${j})" >Delete</button> </td>`
             }
