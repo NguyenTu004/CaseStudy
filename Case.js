@@ -132,7 +132,7 @@
                         let text = Number(arr[l][j].price);
                         let text1 = arr[l][j];
                         if (text>b && text<=a ){
-                            sapXep(arr2,text1);
+                            sapXep1(arr2,text1);
                         }
                     }
                 }
@@ -146,13 +146,13 @@
             if (ar[i].length < 4) {
                 ar[i].push(text);
                 break;
+
             } else {
                 if (ar.length - i === 1) {
-                    if (ar[i].length === 4) {
                         let arr1 = [];
                         ar.push(arr1);
                         ar[i + 1].push(text);
-                    }
+                        break;
                 }
             }
         }
@@ -163,7 +163,23 @@
             search();
         }
     }
-
+    function sapXep1(ar,text) {
+        for (let i =   0; i < ar.length;  i++) {
+             if (ar[i].length < 4) {
+                 ar[i].push(text);
+                    break;
+            } else {
+                if (ar.length - i === 1) {
+                    if (ar[i].length === 4) {
+                        let arr1 = [];
+                        ar.push(arr1);
+                        ar[i + 1].push(text);
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
 
 
