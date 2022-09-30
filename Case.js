@@ -101,7 +101,10 @@
             arr[a][b].setAmount(amount);
             console.log(arr);
         }
-
+        document.getElementById("name").value = "";
+        document.getElementById("img").value= "";
+        document.getElementById("price").value= "";
+        document.getElementById("amount").value= "";
         display(arr)
     }
     function search(){
@@ -119,7 +122,7 @@
                         flag1 = text.includes(search);
                         if (flag1){
                             let text1 = arr[i][j];
-                            sapXep(arr2,text1)
+                            sapXep1(arr2,text1)
                         }
                     }
                 }
